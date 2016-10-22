@@ -1,12 +1,12 @@
 {
   "name": "fable-view",
-  "description": "Functional reactive programming in F# using views",
+  "description": "Functional reactive programming in Fable using views",
   "version": "0.1.0",
   "repository": "github:Pauan/fable-view",
   "license": "MIT",
-  "main": "./dist/umd/Main.js",
-  "module": "./dist/es2015/Main.js",
-  "jsnext:main": "./dist/es2015/Main.js",
+  "main": "./dist/umd/src/fs/Main.js",
+  "module": "./dist/es2015/src/fs/Main.js",
+  "jsnext:main": "./dist/es2015/src/fs/Main.js",
   "devDependencies": {
     "fable-compiler": "^0.7.5-alpha",
     "fable-core": "^0.7.5-alpha",
@@ -15,8 +15,7 @@
   },
   "scripts": {
     "prepublish": "npm run build",
-    "build": "fable --target fable && fable --target umd && fable --target es2015",
-    "watch": "fable --target umd --watch",
+    "build": "fable --target es2015 && fable --target umd",
     "test": "fable --target test"
   }
 }

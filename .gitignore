@@ -1,7 +1,4 @@
-/dist/es2015/
-/dist/fable/
-/dist/test/
-/dist/umd/
+/dist/
 /node_modules/
 
 /npm-debug.log

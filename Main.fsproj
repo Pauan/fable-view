@@ -31,9 +31,9 @@
   <!-- DO NOT EDIT BELOW THIS POINT UNLESS YOU KNOW WHAT YOU'RE DOING -->
   <PropertyGroup>
     <Name>Main</Name>
-    <OutputPath>./dist/fable</OutputPath>
-    <IntermediateOutputPath>./dist/fable</IntermediateOutputPath>
-    <DocumentationFile>./dist/fable/Main.xml</DocumentationFile>
+    <OutputPath>./dist/es2015</OutputPath>
+    <IntermediateOutputPath>./dist/es2015</IntermediateOutputPath>
+    <DocumentationFile>./dist/es2015/Main.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <OutputType>Library</OutputType>

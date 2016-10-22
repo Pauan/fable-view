@@ -15,7 +15,7 @@
    !-->
   <ItemGroup>
     <Reference Include="../node_modules/fable-core/Fable.Core.dll" />
-    <Reference Include="../dist/fable/Main.dll" />
+    <Reference Include="../dist/umd/Main.dll" />
   </ItemGroup>
 
   <!--

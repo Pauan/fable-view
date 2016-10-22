@@ -1,36 +1,26 @@
 {
   "projFile": "./Main.fsproj",
   "sourceMaps": true,
-  "coreLib": "fable-core/es2015",
   "targets": {
-    "fable": {
-      "outDir": "./dist/fable",
+    "es2015": {
+      "outDir": "./dist/es2015",
       "module": "es2015",
+      "coreLib": "fable-core/es2015",
       "dll": true
     },
-    "es2015": {
-      "rollup": {
-        "dest": "./dist/es2015/Main.js",
-        "format": "es"
-      }
-    },
     "umd": {
-      "rollup": {
-        "dest": "./dist/umd/Main.js",
-        "format": "umd"
-      }
+      "outDir": "./dist/umd",
+      "module": "umd",
+      "dll": true
     },
     "test": {
       "projFile": "./test/Test.fsproj",
-      "rollup": {
-        "dest": "./dist/test/Test.js",
-        "format": "cjs",
-        "external": ["assert"]
-      },
+      "outDir": "./dist/test",
+      "module": "commonjs",
       "plugins": ["./node_modules/fable-plugins-nunit/Fable.Plugins.NUnit.dll"],
       "scripts": {
-        "prebuild": "fable --target fable",
-        "postbuild": "mocha --colors ./dist/test/Test.js"
+        "prebuild": "fable --target umd",
+        "postbuild": "mocha --colors ./dist/test/fs"
       }
     }
   }
