@@ -65,7 +65,7 @@ type Map<'A>(f, parent: View<'A>) =
     override this.SubscribeView fn =
         parent.SubscribeView fn
 
-let inline map f parent = Map<'A>(f, parent)
+let map f parent = Map<'A>(f, parent)
 
 
 type Map2<'A, 'B>(f, parent1: View<'A>, parent2: View<'B>) =
@@ -101,7 +101,7 @@ type Map2<'A, 'B>(f, parent1: View<'A>, parent2: View<'B>) =
             stop1.Dispose()
             stop2.Dispose()
 
-let inline map2 f parent1 parent2 = Map2<'A, 'B>(f, parent1, parent2)
+let map2 f parent1 parent2 = Map2<'A, 'B>(f, parent1, parent2)
 
 
 type Filter<'A>(f, init, parent: View<'A>) =
@@ -133,7 +133,7 @@ type Filter<'A>(f, init, parent: View<'A>) =
     override this.SubscribeView fn =
         parent.SubscribeView fn
 
-let inline filter f init parent = Filter<'A>(f, init, parent)
+let filter f init parent = Filter<'A>(f, init, parent)
 
 
 // TODO test this
@@ -175,7 +175,7 @@ type Flatten<'A>(parent: View<View<'A>>) =
             stopParent.Dispose()
             tryDispose stopChild
 
-let inline flatten parent = Flatten<'A>(parent)
+let flatten parent = Flatten<'A>(parent)
 
 
 // TODO test this
@@ -219,7 +219,7 @@ type Async<'A>(init: 'A, parent: View<FSharp.Control.Async<'A>>) =
     override this.SubscribeView fn =
         parent.SubscribeView fn
 
-let inline async init parent = Async<'A>(init, parent)
+let async init parent = Async<'A>(init, parent)
 
 
 type Always<'A>(value) =
@@ -231,7 +231,7 @@ type Always<'A>(value) =
 
     override this.SubscribeView _ = noop
 
-let inline always value = Always<'A>(value)
+let always value = Always<'A>(value)
 
 
 let value (a: View<'A>) =

@@ -8,7 +8,7 @@ type Dispose(fn) =
         member this.Dispose() =
             fn ()
 
-let inline dispose fn = (new Dispose(fn) :> IDisposable)
+let dispose fn = (new Dispose(fn) :> IDisposable)
 
 
 let noop =

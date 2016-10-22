@@ -32,6 +32,8 @@ type Mutable<'A>(value) =
         //id <- id + 1
         id |> events.Trigger
 
+let make a = Mutable(a)
+
 
 [<NoComparison>]
 [<NoEquality>]
